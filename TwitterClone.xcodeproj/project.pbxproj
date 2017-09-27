@@ -20,6 +20,7 @@
 		EBD31C3D1F7BC5C70080506C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C3C1F7BC5C70080506C /* User.swift */; };
 		EBD31C3F1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C3E1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift */; };
 		EBD31C411F7BDD300080506C /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C401F7BDD300080506C /* TweetCell.swift */; };
+		EBD31C431F7BE1CD0080506C /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C421F7BE1CD0080506C /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EBD31C3C1F7BC5C70080506C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EBD31C3E1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceVC+NavigationBar.swift"; sourceTree = "<group>"; };
 		EBD31C401F7BDD300080506C /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		EBD31C421F7BE1CD0080506C /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				EBD31C341F7BB1F80080506C /* HomeDatasource.swift */,
 				EBD31C3C1F7BC5C70080506C /* User.swift */,
+				EBD31C421F7BE1CD0080506C /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD31C351F7BB1F80080506C /* HomeDatasource.swift in Sources */,
+				EBD31C431F7BE1CD0080506C /* Tweet.swift in Sources */,
 				EBD31C3B1F7BB5040080506C /* UserFooter.swift in Sources */,
 				EBD31C371F7BB2EE0080506C /* UserCell.swift in Sources */,
 				EBD31C411F7BDD300080506C /* TweetCell.swift in Sources */,
