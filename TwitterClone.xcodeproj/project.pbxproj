@@ -17,6 +17,7 @@
 		EBD31C371F7BB2EE0080506C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C361F7BB2EE0080506C /* UserCell.swift */; };
 		EBD31C391F7BB4710080506C /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C381F7BB4710080506C /* UserHeader.swift */; };
 		EBD31C3B1F7BB5040080506C /* UserFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C3A1F7BB5040080506C /* UserFooter.swift */; };
+		EBD31C3D1F7BC5C70080506C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C3C1F7BC5C70080506C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EBD31C361F7BB2EE0080506C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		EBD31C381F7BB4710080506C /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 		EBD31C3A1F7BB5040080506C /* UserFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFooter.swift; sourceTree = "<group>"; };
+		EBD31C3C1F7BC5C70080506C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD31C341F7BB1F80080506C /* HomeDatasource.swift */,
+				EBD31C3C1F7BC5C70080506C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				EBD31C2D1F7BAFB60080506C /* HomeDatasourceVC.swift in Sources */,
 				EBD31C151F7B10500080506C /* AppDelegate.swift in Sources */,
 				EBD31C391F7BB4710080506C /* UserHeader.swift in Sources */,
+				EBD31C3D1F7BC5C70080506C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
