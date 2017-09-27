@@ -20,6 +20,8 @@ class UserHeader: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         

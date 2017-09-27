@@ -48,14 +48,14 @@ class UserCell: DatasourceCell {
     }()
     
     let followButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.layer.cornerRadius = 4
         button.layer.borderColor = #colorLiteral(red: 0.2392156863, green: 0.6549019608, blue: 0.9568627451, alpha: 1)
         button.layer.borderWidth = 1
         button.setTitle("Follow", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(#colorLiteral(red: 0.2392156863, green: 0.6549019608, blue: 0.9568627451, alpha: 1), for: .normal)
-        button.setImage(#imageLiteral(resourceName: "follow"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "follow").withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
         return button
@@ -63,6 +63,8 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
