@@ -21,11 +21,7 @@ class Home: JSONDecodable {
         
         let usersArray = json["users"].array
         for userJSON in usersArray! {
-            let name = userJSON["name"].stringValue
-            let username = userJSON["username"].stringValue
-            let bio = userJSON["bio"].stringValue
-            
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            let user = User(json: userJSON)
             users.append(user)
         }
         

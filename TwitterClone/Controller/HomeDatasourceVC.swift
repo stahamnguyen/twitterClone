@@ -11,7 +11,13 @@ import TRON
 
 class HomeDatasourceVC: DatasourceController {
     
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
+    let errorMessageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Something went wrong with the connection. Please try again later."
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionViewLayout.invalidateLayout()
@@ -20,26 +26,30 @@ class HomeDatasourceVC: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(errorMessageLabel)
+        errorMessageLabel.fillSuperview()
+        errorMessageLabel.isHidden = true
+        
         collectionView?.backgroundColor = #colorLiteral(red: 0.9098039216, green: 0.9254901961, blue: 0.9450980392, alpha: 1)
         
         setupNavigationBarItems()
         
-        fetchHomeFeed()
-    }
-    
-    fileprivate func fetchHomeFeed() {
-        
-        let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
-        
-        request.perform(withSuccess: { (homeDatasource) in
-            print("Successfully fetched JSON objects")
+        Service.shared.fetchHomeFeed { (homeDatasource, error) in
+            if let error = error {
+                print("Get error when fetching JSON")
+                self.errorMessageLabel.isHidden = false
+                
+                if let apiError = error as? APIError<JSONError> {
+                    if apiError.response?.statusCode != 200 {
+                        self.errorMessageLabel.text = "Invalid JSON"
+                    }
+                }
+                return
+            }
             
+            self.errorMessageLabel.isHidden = true
             self.datasource = homeDatasource
-            
-        }) { (error) in
-            print("Failed to fetch JSON", error)
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -66,19 +76,33 @@ class HomeDatasourceVC: DatasourceController {
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if let user = self.datasource?.item(indexPath) as? User {
-            //get estimation of the height of the cell based on user.bioTextView
+        if indexPath.section == 0 {
+            guard let user = self.datasource?.item(indexPath) as? User else { return .zero }
             
-            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
-            let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
-            let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+            let estimatedHeight = estimatedHeightForText(user.bioText)
             
-            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            return CGSize(width: view.frame.width, height: estimatedHeight + 66)
             
-            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+        } else if indexPath.section == 1 {
+            
+            guard let tweet = datasource?.item(indexPath) as? Tweet else { return .zero }
+            
+            let estimatedHeight = estimatedHeightForText(tweet.message)
+            
+            return CGSize(width: view.frame.width, height: estimatedHeight + 74)
         }
         
         return CGSize(width: view.frame.width, height: 200)
+    }
+    
+    private func estimatedHeightForText(_ text: String) -> CGFloat {
+        let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
+        let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+        let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+        
+        let estimatedFrame = NSString(string: text).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        
+        return estimatedFrame.height
     }
 }
 

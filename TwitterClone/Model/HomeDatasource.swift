@@ -13,31 +13,16 @@ import SwiftyJSON
 class HomeDatasource: Datasource, JSONDecodable {
     
     let users: [User]
+    let tweets: [Tweet]
     
     required init(json: JSON) throws {
-        print("Ready to parse JSON: \n", json)
         
-        var users = [User]()
-        
-        let usersArray = json["users"].array
-        for userJSON in usersArray! {
-            let name = userJSON["name"].stringValue
-            let username = userJSON["username"].stringValue
-            let bio = userJSON["bio"].stringValue
-            
-            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            users.append(user)
+        guard let usersJSONArray = json["users"].array, let tweetJSONArray = json["tweets"].array else {
+            throw NSError(domain: "com.letsbuildthatapp", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid JSON"])
         }
-        
-        self.users = users
+        self.users = usersJSONArray.map({ return User(json: $0) })
+        self.tweets = tweetJSONArray.map({ return Tweet(json: $0) })
     }
-    
-    let tweets: [Tweet] = {
-        let stahamUser = User(name: "Staham Nguyen", username: "@stahamnguyen", bioText: "iOS Developer, freelance photographer, cryptocurrency investor", profileImage: #imageLiteral(resourceName: "profileStaham"))
-        let tweet1 = Tweet(user: stahamUser, message: "I believe in Trump thought he's kinda bad at the moment")
-        let tweet2 = Tweet(user: stahamUser, message: "Patience's not gonna work on Kim")
-        return [tweet1, tweet2]
-    }()
     
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
