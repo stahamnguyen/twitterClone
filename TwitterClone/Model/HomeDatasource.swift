@@ -7,18 +7,30 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let stahamUser = User(name: "Staham Nguyen", username: "@stahamnguyen", bioText: "iOS Developer, freelance photographer, cryptocurrency investor", profileImage: #imageLiteral(resourceName: "profileStaham"))
+    let users: [User]
+    
+    required init(json: JSON) throws {
+        print("Ready to parse JSON: \n", json)
         
-        let trumpUser = User(name: "Donald Trump", username: "@donaldtrump", bioText: "US President", profileImage: #imageLiteral(resourceName: "profileTrump"))
+        var users = [User]()
         
-        let kimUser = User(name: "Kim Jong Un", username: "@kimjongun", bioText: "Trump will pay for what he said. My people will do anything to defeat the US and protect our our rights. No country can compromise our national benefits, including the US", profileImage: #imageLiteral(resourceName: "profileKim"))
+        let usersArray = json["users"].array
+        for userJSON in usersArray! {
+            let name = userJSON["name"].stringValue
+            let username = userJSON["username"].stringValue
+            let bio = userJSON["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            users.append(user)
+        }
         
-        return [stahamUser, trumpUser, kimUser]
-    }()
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         let stahamUser = User(name: "Staham Nguyen", username: "@stahamnguyen", bioText: "iOS Developer, freelance photographer, cryptocurrency investor", profileImage: #imageLiteral(resourceName: "profileStaham"))

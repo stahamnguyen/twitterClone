@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CBAB95BD406367A63185DAF0 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A617024AC21CFA05C09E31D3 /* Pods_TwitterClone.framework */; };
 		EBD31C151F7B10500080506C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C141F7B10500080506C /* AppDelegate.swift */; };
 		EBD31C1C1F7B10500080506C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD31C1B1F7B10500080506C /* Assets.xcassets */; };
 		EBD31C1F1F7B10500080506C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD31C1D1F7B10500080506C /* LaunchScreen.storyboard */; };
 		EBD31C2D1F7BAFB60080506C /* HomeDatasourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C2C1F7BAFB60080506C /* HomeDatasourceVC.swift */; };
-		EBD31C311F7BB0CD0080506C /* LBTAComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31C321F7BB0CD0080506C /* LBTAComponents.framework */; };
 		EBD31C351F7BB1F80080506C /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C341F7BB1F80080506C /* HomeDatasource.swift */; };
 		EBD31C371F7BB2EE0080506C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C361F7BB2EE0080506C /* UserCell.swift */; };
 		EBD31C391F7BB4710080506C /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C381F7BB4710080506C /* UserHeader.swift */; };
@@ -21,6 +19,12 @@
 		EBD31C3F1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C3E1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift */; };
 		EBD31C411F7BDD300080506C /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C401F7BDD300080506C /* TweetCell.swift */; };
 		EBD31C431F7BE1CD0080506C /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31C421F7BE1CD0080506C /* Tweet.swift */; };
+		EBD31CA01F7C219C0080506C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31CA51F7C219C0080506C /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EBD31CA11F7C219C0080506C /* LBTAComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31CA61F7C219C0080506C /* LBTAComponents.framework */; };
+		EBD31CA21F7C219C0080506C /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31CA71F7C219C0080506C /* Pods_TwitterClone.framework */; };
+		EBD31CA31F7C219C0080506C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31CA81F7C219C0080506C /* SwiftyJSON.framework */; };
+		EBD31CA41F7C219C0080506C /* TRON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD31CA91F7C219C0080506C /* TRON.framework */; };
+		EBD31CD21F7C50F80080506C /* JSONHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD31CD11F7C50F80080506C /* JSONHandlers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,27 @@
 		EBD31C3E1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceVC+NavigationBar.swift"; sourceTree = "<group>"; };
 		EBD31C401F7BDD300080506C /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		EBD31C421F7BE1CD0080506C /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		EBD31C471F7C1ED00080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C481F7C1ED00080506C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C491F7C1ED00080506C /* TRON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TRON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C701F7C1FE80080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C711F7C1FE80080506C /* LBTAComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBTAComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C721F7C1FE80080506C /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C731F7C1FE80080506C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C741F7C1FE80080506C /* TRON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TRON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C921F7C20870080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C931F7C20870080506C /* LBTAComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBTAComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C941F7C20870080506C /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C951F7C20870080506C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C961F7C20870080506C /* TRON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TRON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C9D1F7C21750080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31C9F1F7C217E0080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CA51F7C219C0080506C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CA61F7C219C0080506C /* LBTAComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LBTAComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CA71F7C219C0080506C /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CA81F7C219C0080506C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CA91F7C219C0080506C /* TRON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TRON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD31CD11F7C50F80080506C /* JSONHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHandlers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD31C311F7BB0CD0080506C /* LBTAComponents.framework in Frameworks */,
-				CBAB95BD406367A63185DAF0 /* Pods_TwitterClone.framework in Frameworks */,
+				EBD31CA01F7C219C0080506C /* Alamofire.framework in Frameworks */,
+				EBD31CA11F7C219C0080506C /* LBTAComponents.framework in Frameworks */,
+				EBD31CA21F7C219C0080506C /* Pods_TwitterClone.framework in Frameworks */,
+				EBD31CA31F7C219C0080506C /* SwiftyJSON.framework in Frameworks */,
+				EBD31CA41F7C219C0080506C /* TRON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +88,26 @@
 		26FEDEA299EF3FF8897EA2B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBD31CA51F7C219C0080506C /* Alamofire.framework */,
+				EBD31CA61F7C219C0080506C /* LBTAComponents.framework */,
+				EBD31CA71F7C219C0080506C /* Pods_TwitterClone.framework */,
+				EBD31CA81F7C219C0080506C /* SwiftyJSON.framework */,
+				EBD31CA91F7C219C0080506C /* TRON.framework */,
+				EBD31C9F1F7C217E0080506C /* Alamofire.framework */,
+				EBD31C9D1F7C21750080506C /* Alamofire.framework */,
+				EBD31C921F7C20870080506C /* Alamofire.framework */,
+				EBD31C931F7C20870080506C /* LBTAComponents.framework */,
+				EBD31C941F7C20870080506C /* Pods_TwitterClone.framework */,
+				EBD31C951F7C20870080506C /* SwiftyJSON.framework */,
+				EBD31C961F7C20870080506C /* TRON.framework */,
+				EBD31C701F7C1FE80080506C /* Alamofire.framework */,
+				EBD31C711F7C1FE80080506C /* LBTAComponents.framework */,
+				EBD31C721F7C1FE80080506C /* Pods_TwitterClone.framework */,
+				EBD31C731F7C1FE80080506C /* SwiftyJSON.framework */,
+				EBD31C741F7C1FE80080506C /* TRON.framework */,
+				EBD31C471F7C1ED00080506C /* Alamofire.framework */,
+				EBD31C481F7C1ED00080506C /* SwiftyJSON.framework */,
+				EBD31C491F7C1ED00080506C /* TRON.framework */,
 				EBD31C321F7BB0CD0080506C /* LBTAComponents.framework */,
 				A617024AC21CFA05C09E31D3 /* Pods_TwitterClone.framework */,
 			);
@@ -96,6 +144,7 @@
 		EBD31C131F7B10500080506C /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				EBD31CD01F7C50DA0080506C /* Utilities */,
 				EBD31C331F7BB1E70080506C /* Model */,
 				EBD31C291F7B14460080506C /* View */,
 				EBD31C281F7B143B0080506C /* Controller */,
@@ -135,6 +184,14 @@
 				EBD31C421F7BE1CD0080506C /* Tweet.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EBD31CD01F7C50DA0080506C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EBD31CD11F7C50F80080506C /* JSONHandlers.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +271,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TRON/TRON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TRON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,6 +336,7 @@
 				EBD31C2D1F7BAFB60080506C /* HomeDatasourceVC.swift in Sources */,
 				EBD31C3F1F7BDA130080506C /* HomeDatasourceVC+NavigationBar.swift in Sources */,
 				EBD31C151F7B10500080506C /* AppDelegate.swift in Sources */,
+				EBD31CD21F7C50F80080506C /* JSONHandlers.swift in Sources */,
 				EBD31C391F7BB4710080506C /* UserHeader.swift in Sources */,
 				EBD31C3D1F7BC5C70080506C /* User.swift in Sources */,
 			);
